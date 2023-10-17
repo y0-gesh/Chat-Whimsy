@@ -5,6 +5,7 @@ import CoverImg from "../imges/Windows-11-Bloom.jpg";
 import ChatImg from "../imges/frozaHorizon.jpg";
 import ChatImg2 from "../imges/aCRogue.jpg";
 import { FaCube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -12,7 +13,9 @@ const Home = () => {
       <Navbar />
       <div className="my-6 sm:my-10 md:my-20 absolute w-full px-8 md:px-20">
         <div className="py-24 w-full">
-          <h1 className="text-5xl md:text-6xl font-bold">Real Time Chat Web App:</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">
+            Real Time Chat Web App:
+          </h1>
           <h1 className="text-5xl md:text-6xl font-bold md:mt-3">
             Connect and Chat with Ease
           </h1>
@@ -24,12 +27,12 @@ const Home = () => {
             <button
               type="button"
               className="text-white bg-black hover:text-white border border-black hover:bg-white focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-none text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-black dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-black">
-              Sign Up
+              <Link to="login_page">Sign Up</Link>
             </button>
             <button
               type="button"
               className="text-white hover:text-white border border-black hover:bg-white focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-none text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-black dark:text-black dark:hover:text-white dark:hover:bg-black dark:focus:ring-black">
-              Log In
+              <Link to="login_page">Log In</Link>
             </button>
           </div>
           <img
