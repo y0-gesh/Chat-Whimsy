@@ -21,7 +21,7 @@ const Login = () => {
         const user = userCredential.user;
         // console.log(user);
         dispatch({ type: "LOGIN", payload: user });
-        navigate("/");
+        navigate("/ChatUI");
       })
       .catch((error) => {
         setError(true);

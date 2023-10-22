@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from './login/Login';
 import { DarkModeContext } from './context/darkModeContext';
 import { AuthContext } from './context/AuthContext';
+import ChatUI from './pages/ChatUI';
 
 function App() {
   const {darkMode} = useContext(DarkModeContext);
@@ -21,8 +22,9 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/">
-              <Route index element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="login_page" element={<Login />} />
+              <Route index element={<Home />} />
+              <Route path='ChatUI' index element={<RequireAuth><ChatUI /></RequireAuth>} />
             </Route>
           </Routes>
         </BrowserRouter>
